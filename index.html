@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    
+        <head>
+            <title> Fckingg Cool </title>
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+           
+             <link rel="stylesheet" media="screen" type="text/css" href="styles.css" />
+             <script type="text/javascript" src="js/jquery.js"></script>
+        </head>
+        
+        <body>
+                <button onclick="generateMadlib()" id="btnSubmit" class="btn btn-success btn-lg">Submit</button>
+                <!--<button onclick="generateMadlib()" class="btn btn-success btn-lg">Generate MadLib</button>-->
+                <div id="grandedisplay">   <input id="grade" placeholder="Enter Grade" /><br></div>
+            
+                <script>
+                var fruits=["banana", "watermelon", "apple"];
+                var favorites={"vegetable": "potato","fruit":  "watermelon","drink":  "orangejuice"};
+                var dattext;
+                var key; 
+                var worldCapitals = {"Bangladesh": "Dhaka", "China": "Beijing", "United Kingdom": "London", "United States": "Washington D.C."};
+                
+                worldCapitals.Norway = "Oslo";
+                
+                delete worldCapitals["Bangladesh"];
+                /*
+                oooooooooooooooooooooo oo
+                xxxxxxxxxxxxxxxxxxxxxx xx
+                oooooooooooooooooooooo oo
+
+
+                oooooooooooooooooooooo oo
+                xxxxxxxxxxxxxxxxxxxxxx xx
+                oooooooooooooooooooooo oo
+                */
+                function generateMadlib() {
+                    console.log("Try a good flavor");
+                    dattext += "Yass! <br>";
+                    dattext += worldCapitals["China"];
+                    dattext += " <br>";
+                    dattext += worldCapitals["United States"];
+                    dattext += " <br>";
+                    dattext += worldCapitals["Norway"];
+                    dattext += " <br>";
+                    dattext += worldCapitals["Bangladesh"];
+                    dattext += " <br>";
+                    
+                    for (key in worldCapitals)
+                    {
+                        dattext += "country: " + key + worldCapitals[key];
+                        dattext += " <br>";
+                    }
+                    
+                    for (key in favorites)
+                    {
+                        dattext +=  key + " " + favorites[key];
+                        dattext += " <br>";
+                    }
+                    
+                       dattext += favorites;
+                       
+                       console.log(favorites);
+                       
+                      favorites.fruit = ["pear","apple"];
+                       console.log(favorites);
+                      
+                      
+                      delete favorites.drink;
+                      console.log(favorites);
+                       
+                       dattext += " <br>";
+                       dattext += " <br>";
+                       dattext += " <br>";
+                     for (key in favorites)
+                    {
+                        dattext +=  key + " " + favorites[key];
+                        dattext += " <br>";
+                    }  
+                       
+                    
+                    
+                    document.getElementById("grandedisplay").innerHTML = dattext;
+                    
+                }
+            </script>
+            
+            
+        </body>
+    </html>
